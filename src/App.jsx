@@ -79,9 +79,9 @@ let option2 = {
         show: false,
       },
       data: [
-        { value: 1048, name: 'Search Engine' },
+        { value: 68, name: 'Logged in' },
 
-        { value: 350, name: 'Video Ads' },
+        { value: 32, name: 'Logged Not' },
       ],
     },
   ],
@@ -116,7 +116,7 @@ function App() {
           >
             Eubrics
           </h1>
-          <img src="../public/assets/M-logo.png" alt="logo" />
+          <img src={macDie} alt="/" />
         </div>
 
         <div
@@ -144,7 +144,7 @@ function App() {
                 backgroundColor: '#17171C',
               }}
             >
-              <img src="../public/assets/home-asaid.svg" alt="logo" />
+              <img src={home} alt="/" />
               <h1>Dashboard</h1>
             </div>
             <div
@@ -154,7 +154,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src="../public/assets/chart.svg" alt="logo" />
+              <img src={analytic} alt="/" />
               <h1>Analytics</h1>
             </div>
           </div>
@@ -174,7 +174,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src="../public/assets/setting.svg" alt="logo" />
+              <img src={setting} alt="/" />
               <h1>Setting</h1>
             </div>
             <div
@@ -184,7 +184,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src="../public/assets/headphone.svg" alt="logo" />
+              <img src={head} alt="/" />
               <h1>Help</h1>
             </div>
           </div>
@@ -204,7 +204,7 @@ function App() {
               alignItems: 'center',
             }}
           >
-            <img src="../public/assets/home-main.svg" alt="logo" />
+            <img src={home2} alt="/" />
             <h1>Dashboard</h1>
           </div>
         </nav>
@@ -303,7 +303,7 @@ function App() {
             <div>
               <img
                 style={{ width: '375px', height: '290px' }}
-                src="../public/assets/FrameExcel.png"
+                src={micro}
                 alt="img"
               />
             </div>
@@ -334,8 +334,8 @@ const SmallCard = ({ number, name }) => {
           padding: '10px',
           borderRadius: '10px',
         }}
-        src="../public/assets/user.svg"
-        alt="logo"
+        src={user}
+        alt="/"
       />
       <h1>
         {number} <br />{' '}
@@ -417,18 +417,10 @@ const Employee = () => {
             padding: '10px',
           }}
         >
-          <img
-            style={{ width: '20px' }}
-            src="../public/assets/user.svg"
-            alt="logo"
-          />
+          <img style={{ width: '20px' }} src={user} alt="/" />
           <p>540 Participants</p>
         </div>
-        <img
-          style={{ width: '24px' }}
-          src="../public/assets/arrow-right.svg"
-          alt="logo"
-        />
+        <img style={{ width: '24px' }} src={arrow} alt="/" />
       </div>
     </div>
   );
