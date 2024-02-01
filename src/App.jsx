@@ -1,13 +1,3 @@
-import macDie from './assets/Rectangle 18.png';
-import home from './assets/home-3.svg';
-import home2 from './assets/home-2.svg';
-import analytic from './assets/chart.svg';
-import setting from './assets/setting-2.svg';
-import head from './assets/headphone.svg';
-import user from './assets/user.svg';
-
-import micro from './assets/Frame 427323804.png';
-import arrow from './assets/arrow-right.svg';
 import { useEffect, useRef } from 'react';
 import { getInstanceByDom, init } from 'echarts';
 
@@ -126,7 +116,7 @@ function App() {
           >
             Eubrics
           </h1>
-          <img src={macDie} alt="/" />
+          <img src="../public/assets/M-logo.png" alt="logo" />
         </div>
 
         <div
@@ -154,7 +144,7 @@ function App() {
                 backgroundColor: '#17171C',
               }}
             >
-              <img src={home} alt="/" />
+              <img src="../public/assets/home-asaid.svg" alt="logo" />
               <h1>Dashboard</h1>
             </div>
             <div
@@ -164,7 +154,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src={analytic} alt="/" />
+              <img src="../public/assets/chart.svg" alt="logo" />
               <h1>Analytics</h1>
             </div>
           </div>
@@ -184,7 +174,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src={setting} alt="/" />
+              <img src="../public/assets/setting.svg" alt="logo" />
               <h1>Setting</h1>
             </div>
             <div
@@ -194,7 +184,7 @@ function App() {
                 color: 'gray',
               }}
             >
-              <img src={head} alt="/" />
+              <img src="../public/assets/headphone.svg" alt="logo" />
               <h1>Help</h1>
             </div>
           </div>
@@ -214,7 +204,7 @@ function App() {
               alignItems: 'center',
             }}
           >
-            <img src={home2} alt="/" />
+            <img src="../public/assets/home-main.svg" alt="logo" />
             <h1>Dashboard</h1>
           </div>
         </nav>
@@ -313,7 +303,7 @@ function App() {
             <div>
               <img
                 style={{ width: '375px', height: '290px' }}
-                src={micro}
+                src="../public/assets/FrameExcel.png"
                 alt="img"
               />
             </div>
@@ -344,8 +334,8 @@ const SmallCard = ({ number, name }) => {
           padding: '10px',
           borderRadius: '10px',
         }}
-        src={user}
-        alt="/"
+        src="../public/assets/user.svg"
+        alt="logo"
       />
       <h1>
         {number} <br />{' '}
@@ -427,10 +417,18 @@ const Employee = () => {
             padding: '10px',
           }}
         >
-          <img style={{ width: '20px' }} src={user} alt="/" />
+          <img
+            style={{ width: '20px' }}
+            src="../public/assets/user.svg"
+            alt="logo"
+          />
           <p>540 Participants</p>
         </div>
-        <img style={{ width: '24px' }} src={arrow} alt="/" />
+        <img
+          style={{ width: '24px' }}
+          src="../public/assets/arrow-right.svg"
+          alt="logo"
+        />
       </div>
     </div>
   );
