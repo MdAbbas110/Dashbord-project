@@ -1,13 +1,3 @@
-import macDie from "./assets/Rectangle 18.png";
-import home from "./assets/home-3.svg";
-import home2 from "./assets/home-2.svg";
-import analytic from "./assets/chart.svg";
-import setting from "./assets/setting-2.svg";
-import head from "./assets/headphone.svg";
-import user from "./assets/user.svg";
-
-import micro from "./assets/Frame 427323804.png";
-import arrow from "./assets/arrow-right.svg";
 import { useEffect, useRef } from "react";
 import { getInstanceByDom, init } from "echarts";
 
@@ -45,11 +35,10 @@ let option = {
 				show: false,
 			},
 			data: [
-				{ value: 1048, name: "Search Engine" },
-				{ value: 735, name: "Direct" },
-				{ value: 580, name: "Email" },
-				{ value: 484, name: "Union Ads" },
-				{ value: 300, name: "Video Ads" },
+				{ value: 38, name: "Completed" },
+				{ value: 22, name: "Incomplete" },
+				{ value: 26, name: "On Track" },
+				{ value: 14, name: "Lagging Behind" },
 			],
 		},
 	],
@@ -128,7 +117,7 @@ function App() {
 					>
 						Eubrics
 					</h1>
-					<img src={macDie} alt="/" />
+					<img src="mcd-logo.png" alt="/" />
 				</div>
 
 				<div
@@ -159,7 +148,7 @@ function App() {
 								backgroundColor: "#17171C",
 							}}
 						>
-							<img src={home} alt="/" />
+							<img src="home.svg" alt="/" />
 							<h1>Dashboard</h1>
 						</div>
 						<div
@@ -172,7 +161,7 @@ function App() {
 								borderRadius: "12px",
 							}}
 						>
-							<img src={analytic} alt="/" />
+							<img src="analytics.svg" alt="/" />
 							<h1>Analytics</h1>
 						</div>
 					</div>
@@ -192,7 +181,7 @@ function App() {
 								color: "gray",
 							}}
 						>
-							<img src={setting} alt="/" />
+							<img src="settings.svg" alt="/" />
 							<h1>Setting</h1>
 						</div>
 						<div
@@ -202,7 +191,7 @@ function App() {
 								color: "gray",
 							}}
 						>
-							<img src={head} alt="/" />
+							<img src="help.svg" alt="/" />
 							<h1>Help</h1>
 						</div>
 					</div>
@@ -222,7 +211,7 @@ function App() {
 							alignItems: "center",
 						}}
 					>
-						<img src={home2} alt="/" />
+						<img src="home-2.svg" alt="/" />
 						<h1>Dashboard</h1>
 					</div>
 				</nav>
@@ -321,7 +310,7 @@ function App() {
 						<div>
 							<img
 								style={{ width: "375px", height: "290px" }}
-								src={micro}
+								src="excel-card.png"
 								alt="img"
 							/>
 						</div>
@@ -352,7 +341,7 @@ const SmallCard = ({ number, name }) => {
 					padding: "10px",
 					borderRadius: "10px",
 				}}
-				src={user}
+				src="user.svg"
 				alt="/"
 			/>
 			<h1>
@@ -435,10 +424,10 @@ const Employee = () => {
 						padding: "10px",
 					}}
 				>
-					<img style={{ width: "20px" }} src={user} alt="/" />
+					<img style={{ width: "20px" }} src="user.svg" alt="/" />
 					<p>540 Participants</p>
 				</div>
-				<img style={{ width: "24px" }} src={arrow} alt="/" />
+				<img style={{ width: "24px" }} src="arrow-right.svg" alt="/" />
 			</div>
 		</div>
 	);
