@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 import { getInstanceByDom, init } from "echarts";
 
@@ -225,10 +226,18 @@ function App() {
 							padding: "20px",
 						}}
 					>
-						<SmallCard number="10,453" name="Total User" />
-						<SmallCard number="34%" name="% Completion" />
-						<SmallCard number="3.57/5 (70%)" name="Skill average sore" />
-						<SmallCard number="4.5/5" name="Sentimental overall" />
+						<SmallCard number="10,453" name="Total User" excellent={false} />
+						<SmallCard number="34%" name="% Completion" excellent={false} />
+						<SmallCard
+							number="3.57/5 (70%)"
+							name="Skill average sore"
+							excellent={false}
+						/>
+						<SmallCard
+							number="4.5/5"
+							name="Sentimental overall"
+							excellent={true}
+						/>
 					</div>
 
 					<div
@@ -321,10 +330,11 @@ function App() {
 	);
 }
 
-const SmallCard = ({ number, name }) => {
+const SmallCard = ({ number, name, excellent }) => {
 	return (
 		<div
 			style={{
+				position: "relative",
 				border: "1px solid lightGray",
 				borderRadius: "12px",
 				boxShadow: "0px 0px 0px 1px #EFEEF1 ",
@@ -334,6 +344,25 @@ const SmallCard = ({ number, name }) => {
 				fontSize: "22px",
 			}}
 		>
+			{excellent && (
+				<div
+					style={{
+						position: "absolute",
+						right: 10,
+						top: 10,
+						borderRadius: 18,
+						backgroundColor: "rgba(0, 196, 154, 0.1)",
+						padding: "0px 6px",
+						display: "flex",
+						gap: 4,
+						alignItems: "center",
+					}}
+				>
+					<img style={{ height: 16, width: 16 }} src="emoji.png" alt="Emoji" />
+					<p style={{ fontSize: 14, color: "black" }}>Excellent</p>
+				</div>
+			)}
+
 			<img
 				style={{
 					width: "24px",
@@ -344,10 +373,10 @@ const SmallCard = ({ number, name }) => {
 				src="user.svg"
 				alt="/"
 			/>
-			<h1>
+			<p>
 				{number} <br />{" "}
-				<span style={{ fontSize: "15px", color: "gray" }}>{name}</span>
-			</h1>
+				<span style={{ fontSize: "15px", color: "#8C93A3" }}>{name}</span>
+			</p>
 		</div>
 	);
 };
