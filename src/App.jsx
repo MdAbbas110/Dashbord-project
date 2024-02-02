@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { getInstanceByDom, init } from 'echarts';
+import AsideBar from './components/AsideBar';
 
 let option = {
   tooltip: {
@@ -98,106 +99,8 @@ function App() {
         alignItems: 'stretch',
       }}
     >
-      <aside
-        style={{ backgroundColor: 'black', minWidth: '260px', padding: 20 }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '20px',
-            borderBottom: '2px solid darkgray',
-          }}
-        >
-          <h1
-            style={{
-              color: '#7B61FF',
-              fontSize: '24px',
-            }}
-          >
-            Eubrics
-          </h1>
-          <img src={macDie} alt="/" />
-        </div>
+      <AsideBar />
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: '85%',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              paddingTop: 20,
-              gap: 5,
-              fontSize: '14px',
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '15px',
-                color: 'white',
-                paddingLeft: '20px',
-                borderRadius: '12px',
-                backgroundColor: '#17171C',
-              }}
-            >
-              <img src={home} alt="/" />
-              <h1>Dashboard</h1>
-            </div>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '15px',
-                color: 'gray',
-                paddingLeft: '20px',
-                borderRadius: '12px',
-              }}
-            >
-              <img src={analytic} alt="/" />
-              <h1>Analytics</h1>
-            </div>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              padding: '20px',
-              flexDirection: 'column',
-              fontSize: '14px',
-              borderBottom: '0.5px solid darkgray',
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                gap: '15px',
-                color: 'gray',
-              }}
-            >
-              <img src={setting} alt="/" />
-              <h1>Setting</h1>
-            </div>
-            <div
-              style={{
-                display: 'flex',
-                gap: '15px',
-                color: 'gray',
-              }}
-            >
-              <img src={head} alt="/" />
-              <h1>Help</h1>
-            </div>
-          </div>
-        </div>
-      </aside>
       <div style={{ width: '100%', flexGrow: 1 }}>
         <nav>
           <div
@@ -210,9 +113,11 @@ function App() {
               fontWeight: '500',
               justifyContent: 'start',
               alignItems: 'center',
+              borderBottom: '1px solid lightgray',
+              height: '60px',
             }}
           >
-            <img src={home2} alt="/" />
+            <img src="../public/home-2.svg" alt="/" />
             <h1>Dashboard</h1>
           </div>
         </nav>
@@ -311,7 +216,7 @@ function App() {
             <div>
               <img
                 style={{ width: '375px', height: '290px' }}
-                src={micro}
+                src="../public/excel-card.png"
                 alt="img"
               />
             </div>
@@ -342,7 +247,7 @@ const SmallCard = ({ number, name }) => {
           padding: '10px',
           borderRadius: '10px',
         }}
-        src={user}
+        src="../public/user.svg"
         alt="/"
       />
       <h1>
@@ -425,10 +330,14 @@ const Employee = () => {
             padding: '10px',
           }}
         >
-          <img style={{ width: '20px' }} src={user} alt="/" />
+          <img style={{ width: '20px' }} src="../public/user.svg" alt="/" />
           <p>540 Participants</p>
         </div>
-        <img style={{ width: '24px' }} src={arrow} alt="/" />
+        <img
+          style={{ width: '24px' }}
+          src="../public/arrow-right.svg"
+          alt="/"
+        />
       </div>
     </div>
   );
