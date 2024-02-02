@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const AsideBar = () => {
   return (
@@ -21,7 +21,7 @@ const AsideBar = () => {
         >
           Eubrics
         </h1>
-        <img src="../public/mcd-logo.png" alt="/" />
+        <img src="/mcd-logo.png" alt="/" />
       </div>
 
       <div
@@ -53,7 +53,7 @@ const AsideBar = () => {
               backgroundColor: '#17171C',
             }}
           >
-            <img src="../public/home.svg" alt="/" />
+            <img src="/home.svg" alt="/" />
             <h1>Dashboard</h1>
           </div>
           <div
@@ -66,7 +66,7 @@ const AsideBar = () => {
               borderRadius: '12px',
             }}
           >
-            <img src="../public/analytics.svg" alt="/" />
+            <img src="/analytics.svg" alt="/" />
             <h1>Analytics</h1>
           </div>
 
@@ -83,20 +83,42 @@ const AsideBar = () => {
                 flexDirection: 'column',
                 gap: '20px',
                 listStyle: 'none',
+                color: 'gray',
               }}
             >
-              <Link style={{ color: 'gray', textDecoration: 'none' }} to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) => {
+                  return isActive ? 'color' : '';
+                }}
+              >
                 Home
-              </Link>
-              <Link
-                style={{ color: 'gray', textDecoration: 'none' }}
+              </NavLink>
+              <NavLink
                 to="/users"
+                className={({ isActive }) => {
+                  return isActive ? 'color' : '';
+                }}
               >
                 Data Dump
-              </Link>
+              </NavLink>
 
-              <li>Journey Analytics</li>
-              <li>User feedback</li>
+              <NavLink
+                to="/journey"
+                className={({ isActive }) => {
+                  return isActive ? 'color' : '';
+                }}
+              >
+                Journey Analytics
+              </NavLink>
+              <NavLink
+                to="/feedback"
+                className={({ isActive }) => {
+                  return isActive ? 'color' : '';
+                }}
+              >
+                User Feedback
+              </NavLink>
             </ul>
           </div>
         </div>
@@ -116,7 +138,7 @@ const AsideBar = () => {
               color: 'gray',
             }}
           >
-            <img src="../public/settings.svg" alt="/" />
+            <img src="/settings.svg" alt="/" />
             <h1>Setting</h1>
           </div>
           <div
@@ -126,7 +148,7 @@ const AsideBar = () => {
               color: 'gray',
             }}
           >
-            <img src="../public/help.svg" alt="/" />
+            <img src="/help.svg" alt="/" />
             <h1>Help</h1>
           </div>
         </div>

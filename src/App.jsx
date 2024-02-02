@@ -117,7 +117,7 @@ function App() {
               height: '60px',
             }}
           >
-            <img src="../public/home-2.svg" alt="/" />
+            <img src="/home-2.svg" alt="/" />
             <h1>Dashboard</h1>
           </div>
         </nav>
@@ -215,7 +215,7 @@ function App() {
             <div>
               <img
                 style={{ width: '375px', height: '290px' }}
-                src="../public/excel-card.png"
+                src="/excel-card.png"
                 alt="img"
               />
             </div>
@@ -246,7 +246,7 @@ const SmallCard = ({ number, name }) => {
           padding: '10px',
           borderRadius: '10px',
         }}
-        src="../public/user.svg"
+        src="/user.svg"
         alt="/"
       />
       <h1>
@@ -329,14 +329,10 @@ export const Employee = () => {
             padding: '10px',
           }}
         >
-          <img style={{ width: '20px' }} src="../public/user.svg" alt="/" />
+          <img style={{ width: '20px' }} src="/user.svg" alt="/" />
           <p>540 Participants</p>
         </div>
-        <img
-          style={{ width: '24px' }}
-          src="../public/arrow-right.svg"
-          alt="/"
-        />
+        <img style={{ width: '24px' }} src="/arrow-right.svg" alt="/" />
       </div>
     </div>
   );

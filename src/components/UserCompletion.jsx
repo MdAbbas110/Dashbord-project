@@ -30,7 +30,7 @@ const UserCompletion = () => {
               height: '60px',
             }}
           >
-            <img src="../public/home-2.svg" alt="/" />
+            <img src="/home-2.svg" alt="/" />
             <h1>Data Dump</h1>
           </div>
         </nav>
