@@ -98,7 +98,9 @@ function App() {
         alignItems: 'stretch',
       }}
     >
-      <aside style={{ backgroundColor: 'black', minWidth: '260px' }}>
+      <aside
+        style={{ backgroundColor: 'black', minWidth: '260px', padding: 20 }}
+      >
         <div
           style={{
             display: 'flex',
@@ -131,15 +133,18 @@ function App() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              padding: '20px',
+              paddingTop: 20,
+              gap: 5,
               fontSize: '14px',
             }}
           >
             <div
               style={{
                 display: 'flex',
+                alignItems: 'center',
                 gap: '15px',
                 color: 'white',
+                paddingLeft: '20px',
                 borderRadius: '12px',
                 backgroundColor: '#17171C',
               }}
@@ -150,8 +155,11 @@ function App() {
             <div
               style={{
                 display: 'flex',
+                alignItems: 'center',
                 gap: '15px',
                 color: 'gray',
+                paddingLeft: '20px',
+                borderRadius: '12px',
               }}
             >
               <img src={analytic} alt="/" />
@@ -197,7 +205,7 @@ function App() {
               display: 'flex',
               gap: '15px',
               color: '#0F1D40',
-              padding: '5px 20px',
+              padding: '10px 20px',
               fontSize: '18px',
               fontWeight: '500',
               justifyContent: 'start',
