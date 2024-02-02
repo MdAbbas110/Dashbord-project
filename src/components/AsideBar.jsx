@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const AsideBar = () => {
   return (
     <aside style={{ backgroundColor: 'black', minWidth: '260px', padding: 20 }}>
@@ -72,7 +74,7 @@ const AsideBar = () => {
             style={{
               margin: '0px 25px',
               color: 'gray',
-              fontSize: '18px',
+              fontSize: '20px',
             }}
           >
             <ul
@@ -83,7 +85,16 @@ const AsideBar = () => {
                 listStyle: 'none',
               }}
             >
-              <li>Data Dump</li>
+              <Link style={{ color: 'gray', textDecoration: 'none' }} to="/">
+                Home
+              </Link>
+              <Link
+                style={{ color: 'gray', textDecoration: 'none' }}
+                to="/users"
+              >
+                Data Dump
+              </Link>
+
               <li>Journey Analytics</li>
               <li>User feedback</li>
             </ul>

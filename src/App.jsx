@@ -196,7 +196,6 @@ function App() {
               </div>
               <div
                 style={{
-                  border: '1px solid gray',
                   borderRadius: '12px',
                   boxShadow: '0px 0px 0px 1px #EFEEF1 ',
                   backgroundColor: 'white',
@@ -290,7 +289,7 @@ const ChartCard = ({ heading, chartComp }) => {
   );
 };
 
-const Employee = () => {
+export const Employee = () => {
   return (
     <div
       style={{
