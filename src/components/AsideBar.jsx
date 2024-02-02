@@ -38,7 +38,8 @@ const AsideBar = () => {
             flexDirection: 'column',
             paddingTop: 20,
             gap: 5,
-            fontSize: '14px',
+            fontSize: '16px',
+
             cursor: 'pointer',
           }}
         >
@@ -47,14 +48,20 @@ const AsideBar = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '15px',
-              color: 'white',
+              fontWeight: '600',
+              fontSize: '20px',
               paddingLeft: '20px',
-              borderRadius: '12px',
-              backgroundColor: '#17171C',
             }}
           >
             <img src="/home.svg" alt="/" />
-            <h1>Dashboard</h1>
+            <NavLink
+              to="/"
+              className={({ isActive }) => {
+                return isActive ? 'dash' : '';
+              }}
+            >
+              Dashboard
+            </NavLink>
           </div>
           <div
             style={{
@@ -67,12 +74,12 @@ const AsideBar = () => {
             }}
           >
             <img src="/analytics.svg" alt="/" />
-            <h1>Analytics</h1>
+            <h2>Analytics</h2>
           </div>
 
           <div
             style={{
-              margin: '0px 25px',
+              margin: '0px 20px',
               color: 'gray',
               fontSize: '20px',
             }}
@@ -86,14 +93,6 @@ const AsideBar = () => {
                 color: 'gray',
               }}
             >
-              <NavLink
-                to="/"
-                className={({ isActive }) => {
-                  return isActive ? 'color' : '';
-                }}
-              >
-                Home
-              </NavLink>
               <NavLink
                 to="/users"
                 className={({ isActive }) => {

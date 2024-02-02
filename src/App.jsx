@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { getInstanceByDom, init } from 'echarts';
 import AsideBar from './components/AsideBar';
 
-let option = {
+export let option = {
   tooltip: {
     trigger: 'item',
   },
@@ -46,7 +46,7 @@ let option = {
   ],
 };
 
-let option2 = {
+export let option2 = {
   tooltip: {
     trigger: 'item',
   },
@@ -257,7 +257,7 @@ const SmallCard = ({ number, name }) => {
   );
 };
 
-const ChartCard = ({ heading, chartComp }) => {
+export const ChartCard = ({ heading, chartComp }) => {
   return (
     <div
       style={{
@@ -338,7 +338,7 @@ export const Employee = () => {
   );
 };
 
-function ReactDoughtnutChart({ option }) {
+export function ReactDoughtnutChart({ option }) {
   const chartRef = useRef(null);
 
   useEffect(() => {

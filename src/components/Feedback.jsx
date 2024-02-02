@@ -19,7 +19,7 @@ export const Feedback = () => {
           padding: '20px',
         }}
       >
-        <h1>Coming soon</h1>
+        <h1>Your FeedBak </h1>
       </div>
     </div>
   );

@@ -15,24 +15,22 @@ const UserCompletion = () => {
     >
       <AsideBar />
       <section style={{ width: '100%', flexGrow: 1, padding: '20px' }}>
-        <nav>
-          <div
-            style={{
-              display: 'flex',
-              gap: '15px',
-              color: '#0F1D40',
-              padding: '10px 20px',
-              fontSize: '18px',
-              fontWeight: '500',
-              justifyContent: 'start',
-              alignItems: 'center',
-              borderBottom: '1px solid lightgray',
-              height: '60px',
-            }}
-          >
-            <img src="/home-2.svg" alt="/" />
-            <h1>Data Dump</h1>
-          </div>
+        <nav
+          style={{
+            display: 'flex',
+            gap: '15px',
+            color: '#0F1D40',
+            padding: '10px 20px',
+            fontSize: '18px',
+            fontWeight: '500',
+            justifyContent: 'start',
+            alignItems: 'center',
+            borderBottom: '1px solid lightgray',
+            height: '60px',
+          }}
+        >
+          <img src="/home-2.svg" alt="/" />
+          <h1>Data Dump</h1>
         </nav>
 
         <div
