@@ -2,7 +2,14 @@ import { NavLink } from 'react-router-dom';
 
 const AsideBar = () => {
   return (
-    <aside style={{ backgroundColor: 'black', minWidth: '260px', padding: 20 }}>
+    <aside
+      style={{
+        backgroundColor: 'black',
+        minWidth: '260px',
+        padding: 20,
+        height: '100dvh',
+      }}
+    >
       <div
         style={{
           display: 'flex',
@@ -54,6 +61,7 @@ const AsideBar = () => {
             }}
           >
             <img src="/home.svg" alt="/" />
+
             <NavLink
               to="/"
               className={({ isActive }) => {

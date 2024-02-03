@@ -33,7 +33,6 @@ const Journey = () => {
             height: '50px',
           }}
         >
-          {/* <img src="/home-2.svg" alt="/" /> */}
           <h1>New Employee Journey</h1>
         </nav>
 
@@ -93,7 +92,7 @@ const Journey = () => {
           style={{
             display: 'grid',
             gap: '10px',
-            margin: '15px 0',
+            margin: '25px 0',
             gridTemplateColumns: '1fr 1fr 1fr',
           }}
         >

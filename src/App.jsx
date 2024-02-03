@@ -93,7 +93,7 @@ function App() {
     <main
       style={{
         backgroundColor: 'white',
-        height: '100%',
+        height: '100dvh',
         width: '100%',
         display: 'flex',
         alignItems: 'stretch',

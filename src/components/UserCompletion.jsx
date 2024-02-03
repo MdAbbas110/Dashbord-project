@@ -26,7 +26,7 @@ const UserCompletion = () => {
             justifyContent: 'start',
             alignItems: 'center',
             borderBottom: '1px solid lightgray',
-            height: '60px',
+            height: '50px',
           }}
         >
           <img src="/home-2.svg" alt="/" />
