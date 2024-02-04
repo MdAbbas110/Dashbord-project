@@ -1,0 +1,35 @@
+import React from 'react';
+import { DataGrid, gridClasses } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { grey } from '@mui/material/colors';
+
+const UserItem = () => {
+  const { data } = useDemoData({
+    dataSet: 'Commodity',
+    rowLength: 200,
+    maxColumns: 8,
+  });
+
+  const getRowSpacing = React.useCallback((params) => {
+    return {
+      top: params.isFirstVisible ? 0 : 5,
+      bottom: params.isLastVisible ? 0 : 5,
+    };
+  }, []);
+  return (
+    <div style={{ height: 400, width: '100%' }}>
+      <DataGrid
+        {...data}
+        getRowSpacing={getRowSpacing}
+        sx={{
+          [`& .${gridClasses.row}`]: {
+            bgcolor: (theme) =>
+              theme.palette.mode === 'light' ? grey[200] : grey[900],
+          },
+        }}
+      />
+    </div>
+  );
+};
+
+export default UserItem;

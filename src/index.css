@@ -28,3 +28,8 @@ a{
   border-radius: 12px;
   background-color: #17171C;
 }
+
+.topBg {
+  color: #7B61FF;
+  border-bottom: 2px solid #7B61FF;
+}

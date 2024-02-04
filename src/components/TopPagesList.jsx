@@ -1,8 +1,8 @@
-const TopPagesList = () => {
+const TopPagesList = ({ name, number }) => {
   return (
-    <div>
-      <h1 style={{ fontSize: '18px', color: '#7B61FF', marginRight: '5px' }}>
-        User Completion{' '}
+    <div style={{ color: '#525C76', fontWeight: '500' }}>
+      <p style={{ fontSize: '18px', marginRight: '5px' }}>
+        {name}{' '}
         <span
           style={{
             backgroundColor: '#EEEFF2',
@@ -10,9 +10,9 @@ const TopPagesList = () => {
             borderRadius: '10px',
           }}
         >
-          1442
+          {number}
         </span>{' '}
-      </h1>
+      </p>
     </div>
   );
 };
