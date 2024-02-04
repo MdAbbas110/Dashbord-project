@@ -5,8 +5,6 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import UserCompletion from './components/UserCompletion.jsx';
 import Journey from './components/Journey.jsx';
-import { Feedback } from './components/Feedback.jsx';
-import DataGridDemo from './components/UserJourney.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,10 +19,6 @@ const router = createBrowserRouter([
   {
     path: '/journey',
     element: <Journey />,
-  },
-  {
-    path: '/feedback',
-    element: <Feedback />,
   },
 ]);
 

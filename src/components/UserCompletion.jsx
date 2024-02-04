@@ -1,9 +1,7 @@
 import AsideBar from './AsideBar';
 import TopPagesList from './TopPagesList';
 import DataGridDemo from './UserJourney';
-import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import DataGridProDemo from './userModule';
 import UserModule from './UserModule';
 import UserItem from './UserItem';
 import UserJourneyTable from './UserJourneyTable';
@@ -17,7 +15,7 @@ const UserCompletion = () => {
       <div
         style={{
           backgroundColor: 'white',
-          height: '100%',
+          height: '130vh',
           width: '100%',
           display: 'flex',
           alignItems: 'stretch',
@@ -163,28 +161,10 @@ const UserCompletion = () => {
           >
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(8, 1fr)',
-                fontSize: '12px',
-                color: 'gray',
-                padding: '0 10px',
-              }}
-            >
-              <h2 style={{ gridColumn: 'span 2' }}>User</h2>
-
-              <h2>Role</h2>
-              <h2>Reporting</h2>
-              <h2>Assigned</h2>
-              <h2>Unlock</h2>
-              <h2>Completed</h2>
-              <h2>Completion</h2>
-            </div>
-
-            <div
-              style={{
                 borderRadius: '12px',
                 boxShadow: '0px 0px 0px 1px #EFEEF1 ',
                 backgroundColor: 'white',
+                marginTop: '20px',
               }}
             >
               {dataValue === 'userJourney' ? (

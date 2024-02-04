@@ -90,143 +90,158 @@ export let option2 = {
 
 function App() {
   return (
-    <main
-      style={{
-        backgroundColor: 'white',
-        height: '100dvh',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'stretch',
-      }}
-    >
-      <AsideBar />
+    <div style={{ background: 'black' }}>
+      <main
+        style={{
+          backgroundColor: 'white',
+          height: 'auto',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'stretch',
+          borderRadius: '1.5rem',
+        }}
+      >
+        <AsideBar />
 
-      <div style={{ width: '100%', flexGrow: 1 }}>
-        <nav>
-          <div
-            style={{
-              display: 'flex',
-              gap: '15px',
-              color: '#0F1D40',
-              padding: '10px 20px',
-              fontSize: '18px',
-              fontWeight: '500',
-              justifyContent: 'start',
-              alignItems: 'center',
-              borderBottom: '1px solid lightgray',
-              height: '60px',
-            }}
-          >
-            <img src="/home-2.svg" alt="/" />
-            <h1>Dashboard</h1>
-          </div>
-        </nav>
-
-        <section>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr 1fr',
-              gap: '16px',
-              padding: '20px',
-            }}
-          >
-            <SmallCard number="10,453" name="Total User" />
-            <SmallCard number="34%" name="% Completion" />
-            <SmallCard number="3.57/5 (70%)" name="Skill average sore" />
-            <SmallCard number="4.5/5" name="Sentimental overall" />
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '12px',
-              padding: '5px 20px',
-            }}
-          >
-            <ChartCard
-              heading="No of people logged In/Not"
-              chartComp={<ReactDoughtnutChart option={option2} />}
-            />
-            <ChartCard
-              heading="No of people Journey"
-              chartComp={<ReactDoughtnutChart option={option} />}
-            />
-          </div>
-
-          <div
-            style={{
-              padding: '15px 10px',
-              margin: '10px',
-              display: 'flex',
-              gap: '10px',
-            }}
-          >
+        <div style={{ width: '100%', flexGrow: 1 }}>
+          <nav>
             <div
               style={{
-                flex: '1 ',
-                border: '1px solid gray',
-                borderRadius: '12px',
-                boxShadow: '0px 0px 0px 1px #EFEEF1 ',
-                padding: '0px 5px',
-                overflowY: 'auto',
-                height: '18rem',
-                backgroundColor: '#F5F6F7',
+                display: 'flex',
+                gap: '15px',
+                color: '#0F1D40',
+                padding: '10px 20px',
+                fontSize: '18px',
+                fontWeight: '500',
+                justifyContent: 'start',
+                alignItems: 'center',
+                borderBottom: '1px solid lightgray',
+                height: '60px',
+              }}
+            >
+              <img src="/home-2.svg" alt="/" />
+              <h1>Dashboard</h1>
+            </div>
+          </nav>
+
+          <section>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr 1fr 1fr',
+                gap: '16px',
+                padding: '20px',
+              }}
+            >
+              <SmallCard number="10,453" name="Total User" img="/user.svg" />
+              <SmallCard
+                number="34%"
+                name="% Completion"
+                img="/tick-circle.png"
+              />
+              <SmallCard
+                number="3.57/5 (70%)"
+                name="Skill average sore"
+                img="/lamp-charge.png"
+              />
+              <SmallCard
+                number="4.5/5"
+                name="Sentimental overall"
+                img="/lamp-charge.png"
+              />
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '12px',
+                padding: '5px 20px',
+              }}
+            >
+              <ChartCard
+                heading="No of people logged In/Not"
+                chartComp={<ReactDoughtnutChart option={option2} />}
+              />
+              <ChartCard
+                heading="No of people Journey"
+                chartComp={<ReactDoughtnutChart option={option} />}
+              />
+            </div>
+
+            <div
+              style={{
+                padding: '15px 10px',
+                margin: '10px',
+                display: 'flex',
+                gap: '10px',
               }}
             >
               <div
                 style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  fontSize: '14px',
-                  padding: '0px 10px',
-                }}
-              >
-                <h2>Journey (1,253)</h2>
-                <h2
-                  style={{
-                    color: '#7B61FF',
-                    fontSize: '20px',
-                    fontWeight: '500',
-                  }}
-                >
-                  View All
-                </h2>
-              </div>
-              <div
-                style={{
+                  flex: '1 ',
+                  border: '1px solid gray',
                   borderRadius: '12px',
                   boxShadow: '0px 0px 0px 1px #EFEEF1 ',
-                  backgroundColor: 'white',
+                  padding: '0px 5px',
+                  overflowY: 'auto',
+                  height: '18rem',
+                  backgroundColor: '#F5F6F7',
                 }}
               >
-                <Employee />
-                <Employee />
-                <Employee />
-                <Employee />
-                <Employee />
-                <Employee />
-                <Employee />
-                <Employee />
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    fontSize: '14px',
+                    padding: '0px 10px',
+                  }}
+                >
+                  <h2>Journey (1,253)</h2>
+                  <h2
+                    style={{
+                      color: '#7B61FF',
+                      fontSize: '20px',
+                      fontWeight: '500',
+                    }}
+                  >
+                    View All
+                  </h2>
+                </div>
+                <div
+                  style={{
+                    borderRadius: '12px',
+                    boxShadow: '0px 0px 0px 1px #EFEEF1 ',
+                    backgroundColor: 'white',
+                  }}
+                >
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                </div>
+              </div>
+
+              <div>
+                <img
+                  style={{ width: '375px', height: '290px' }}
+                  src="/excel-card.png"
+                  alt="img"
+                />
               </div>
             </div>
-
-            <div>
-              <img
-                style={{ width: '375px', height: '290px' }}
-                src="/excel-card.png"
-                alt="img"
-              />
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+          </section>
+        </div>
+      </main>
+    </div>
   );
 }
 
-const SmallCard = ({ number, name }) => {
+const SmallCard = ({ number, name, img }) => {
   return (
     <div
       style={{
@@ -246,7 +261,7 @@ const SmallCard = ({ number, name }) => {
           padding: '10px',
           borderRadius: '10px',
         }}
-        src="/user.svg"
+        src={img}
         alt="/"
       />
       <h1>

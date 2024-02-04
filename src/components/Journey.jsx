@@ -54,7 +54,7 @@ const Journey = () => {
               padding: '0 10px',
             }}
           >
-            <img src="/user.svg" alt="logo" />
+            <img src="/people.svg" alt="logo" />
             <p style={{ fontSize: '18px', fontWeight: '500' }}>
               This journey has ran in 5 batches so far
             </p>
@@ -99,11 +99,27 @@ const Journey = () => {
           <div
             style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
           >
-            <SmallCard2 number="10,453" name="Total User" />
-            <SmallCard2 number="34%" name="% Completion" />
-            <SmallCard2 number="3.57/5 (70%)" name="Skill average sore" />
-            <SmallCard2 number="4.5/5" name="Sentimental overall" />
-            <SmallCard2 number="34%" name="% Completion" />
+            <SmallCard2 number="10,453" name="Total User" img="/user.svg" />
+            <SmallCard2
+              number="34%"
+              name="% Completion"
+              img="/tick-circle.png"
+            />
+            <SmallCard2
+              number="3.57/5 (70%)"
+              name="Skill average sore"
+              img="/lamp-charge.png"
+            />
+            <SmallCard2
+              number="4.5/5"
+              name="Sentimental overall"
+              img="/lamp-charge.png"
+            />
+            <SmallCard2
+              number="34%"
+              name="% Completion"
+              img="/tick-circle.png"
+            />
           </div>
           <div>
             <ChartCard
@@ -141,7 +157,7 @@ const Journey = () => {
   );
 };
 
-const SmallCard2 = ({ name, number }) => {
+const SmallCard2 = ({ name, number, img }) => {
   return (
     <div
       style={{
@@ -162,7 +178,7 @@ const SmallCard2 = ({ name, number }) => {
           padding: '10px 14px',
         }}
       >
-        <img src="/user.svg" alt="/" />
+        <img src={img} alt="/" />
       </div>
       <h1 style={{ fontSize: '16px', color: 'black' }}>
         {number} <br />{' '}

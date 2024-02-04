@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const AsideBar = () => {
+  const [showOption, setShowOption] = useState(0);
+
   return (
     <aside
       style={{
         backgroundColor: 'black',
         minWidth: '260px',
         padding: 20,
-        height: '100dvh',
+        height: 'auto',
       }}
     >
       <div
@@ -43,34 +46,32 @@ const AsideBar = () => {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            paddingTop: 20,
             gap: 5,
             fontSize: '16px',
-
             cursor: 'pointer',
+            padding: '20px 10px',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '15px',
-              fontWeight: '600',
-              fontSize: '20px',
-              paddingLeft: '20px',
+          <NavLink
+            to="/"
+            className={({ isActive }) => {
+              return isActive ? 'dash' : '';
             }}
           >
-            <img src="/home.svg" alt="/" />
-
-            <NavLink
-              to="/"
-              className={({ isActive }) => {
-                return isActive ? 'dash' : '';
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px',
+                fontWeight: '600',
+                fontSize: '20px',
+                padding: '20px 20px',
               }}
             >
+              <img src="/home.svg" alt="/" />
               Dashboard
-            </NavLink>
-          </div>
+            </div>
+          </NavLink>
           <div
             style={{
               display: 'flex',
@@ -79,6 +80,7 @@ const AsideBar = () => {
               color: 'gray',
               paddingLeft: '20px',
               borderRadius: '12px',
+              padding: '8px 20px',
             }}
           >
             <img src="/analytics.svg" alt="/" />
@@ -87,7 +89,7 @@ const AsideBar = () => {
 
           <div
             style={{
-              margin: '0px 20px',
+              margin: '0px 0px',
               color: 'gray',
               fontSize: '20px',
             }}
@@ -107,7 +109,7 @@ const AsideBar = () => {
                   return isActive ? 'color' : '';
                 }}
               >
-                Data Dump
+                <div style={{ padding: '8px 15px' }}>Data Dump</div>
               </NavLink>
 
               <NavLink
@@ -116,15 +118,26 @@ const AsideBar = () => {
                   return isActive ? 'color' : '';
                 }}
               >
-                Journey Analytics
+                <div
+                  style={{
+                    padding: '10px 10px',
+
+                    width: 'auto',
+                  }}
+                >
+                  Journey Analytics
+                </div>
               </NavLink>
-              <NavLink
-                to="/feedback"
-                className={({ isActive }) => {
-                  return isActive ? 'color' : '';
-                }}
-              >
-                User Feedback
+              <NavLink to="/">
+                <div
+                  style={{
+                    padding: '10px 10px',
+
+                    width: 'auto',
+                  }}
+                >
+                  User Feedback
+                </div>
               </NavLink>
             </ul>
           </div>
